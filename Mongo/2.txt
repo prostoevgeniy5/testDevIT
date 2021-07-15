@@ -1,0 +1,23 @@
+// База данных MongoDB содержит коллекции:
+
+// posts - Записи - 
+// {
+//   "properties": {
+//     "_id": { "bsonType": "objectId" },
+//     "title": { "bsonType": "string" },
+//     "content": { "bsonType": "string" },
+//     "author": { "bsonType": "string" },
+//     "like": { "bsonType": "int" },
+//     "dislike": { "bsonType": "int" }
+//   }
+// }
+
+// Все команды вы выполняете в mongo shell
+// Задание
+
+//     Выведите все записи у которых like больше 100
+# Опишем функцию для выборки документов из коллекции которая возвращает документы поле like которых больше 100
+fn = function() { return this.like > 100 ;}
+
+# fn функцию передаём в качестве аргумента функции поиска find(fn)
+db.posts.find(fn);

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--   //     Сверстайте страницу логина, которая должна содержать только форму с полями email, password.   -->
+    <title>Login</title>
+    <style>
+        .container {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: #ccc;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #888;
+            width: 60vw;
+            min-width: 400px;
+            min-height: 300px;
+            height: 50vh;
+            border: 1px solid gray;
+            border-radius: 5px;
+            font-family: sans-serif;
+            box-shadow: 3px 3px 6px rgba(0, 0, 255, .2), 3px -3px 6px rgba(0, 0, 255, .2), -3px 3px 6px rgba(0, 0, 255, .2);
+        }
+
+        .form-item {
+            margin: 10px;
+            width: 75%;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        label.form-item-element {
+           font-size: 16px;
+            width: 25%;
+            margin-left: 0;
+            padding: 5px 10px 0px 10px;
+            text-align: left;
+        }
+
+        input.form-item-element {
+            margin-right: 0;
+            width: 75%;
+        }
+        .form-submit {
+            padding: 5px;
+            border: 2px solid gray;
+            background-color: rgb(81, 206, 91);
+            height: 50px;
+            border-radius: 10%;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+        .form-submit:hover {
+            box-shadow: 4px 4px 6px rgba(0, 0, 255, .2), 4px -4px 6px rgba(0, 0, 255, .2), -4px 4px 6px rgba(0, 0, 255, .2);
+            background-color: yellowgreen;
+            color: #000;
+        }
+        .form-submit:active {
+            background-color: #ccc;
+            font-weight: 700;
+            color: #888;
+        }
+
+        .form-submit:disabled {
+            border: 1px solid transparent;
+            box-shadow: none;
+            background-color: #ccc;
+            color:gray;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <form>
+            <div class="form-item">
+                <label class="form-item-element">Email: </label>
+                <input class="form-item-element" type="email" placeholder="Your Email">
+            </div>
+            <div class="form-item">
+                <label class="form-item-element">Password: </label>
+                <input class="form-item-element" type="password" placeholder="Enter password">
+            </div>
+            <div class="form-item">
+                <input class="form-submit" type="submit" value="Send data">
+            </div>
+        </form>
+    </main>
+</body>
+</html>

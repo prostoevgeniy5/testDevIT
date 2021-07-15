@@ -1,0 +1,32 @@
+// GIT внесение изменений
+// Рабочее окружение
+
+// У вас чистая операционнная система с установленными программами git, nano, ssh. Ваш публичный ключь уже добавлен к git репозиторию и вы имеете полный доступ на чтение/запись, но он отсутствует на вашем компьютере. Репозиторий: git@example.com:example/test.git Ветки: master, dev, stage, release
+// Задание
+
+// Внести изменения в ветке dev репозитория git@example.com:example/test.git, добавив в корень файл Readme.md с текстом ### May be in future и залить их на удаленный репозиторий. Напишите набор команд для решения этой задачи с коментариями.
+# Создаем папку для будущего репозитория с github.chmod
+    mkdir repofromgithub/
+# переходим в папку repofromgithub
+    cd repofromgithub/    
+# Инициализируем  github
+    git init
+# Устанавливаем подключение к удаленному репозиторию, чтобы связать его с локальным
+    git remote add origin git@example.com:example/test.git
+# Клонируем удаленный репозиторий в локальный   
+    git clone  git@example.com:example/test.git
+# Переходим в папку test
+    cd test/       
+# Создаем ветку dev
+    git branch dev
+# Перключаемся на ветку dev
+    git checkout dev
+# Создаем файл Readme.md
+    touch ./Readme.md
+# Заполняем содержимым файл Readme.md
+    printf "### May be in future" > Readme.md
+# Добавляем файл в локальный репозиторий и комитим
+    git add Readme.md
+    git commit -m "Created file Readme.md"
+# Отправляем локальный репозиторий на удаленный
+    git push origin dev 

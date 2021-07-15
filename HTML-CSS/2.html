@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--       //     Опишите все известные вам способы позиционирования модального окна, по центру экрана.   -->
+    <title>Document</title>
+    <style>
+.wraper_modal {
+    position: relative;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -20%;
+    margin-top: -10%;
+}
+
+.container {
+    position: relative;
+    background-color: #fff;
+    width: 40vw;
+    height: 30vh;
+    text-align: center;
+    padding: 40px 10px;
+    font-family: sans-serif;
+}
+
+.modal__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="wraper_modal">
+        <div class="modal">
+            <div class="container"> 
+                <button data-modalclose class="modal__close">Close</button>  
+                        Текст модального окошка.     
+            </div>
+        </div>
+    </div>
+</body>
+</html>

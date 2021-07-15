@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--   Опишите все известные вам способы позиционирования 5 элементов по центру, каждый из которых должен занимать 20%.   -->
+    <title>Positioning</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .wraper, 
+    .wraper2,
+    .wraper3 {
+        width: 100vw;
+        min-height: 100vh;
+        border: 1px solid #0f0;
+    }
+
+    .wraper2 {
+        display: flex;
+    }
+
+    .wraper3{
+        position: relative;
+    }
+    .class1_1 {
+        float: left;
+    }
+
+    .class1_1,
+    .class1_2 {
+        box-sizing: border-box;
+        margin:calc((100vh - 20vh) / 2) 0;
+        width: 20vw;
+        height: 20vh;
+        background-color: #ccc;
+        border: 1px solid #000;
+    }
+
+    .class1_3,
+    .class1_4,
+    .class1_5,
+    .class1_6,
+    .class1_7 {
+        position: absolute;
+        margin: auto;
+        width: 20vw;
+        height: 20vh;
+        border: 1px solid #000;
+        background-color: #ccc;
+        top: calc((100vh - 20vh) / 2);
+        left: 0;       
+    }
+
+    .class1_4 {
+        left: 20%;
+    }
+    .class1_5 {
+        left: 40%;
+    }
+    .class1_6 {
+        left: 60%;
+    }
+    .class1_7 {
+        left: 80%;
+    }
+</style>
+<body>
+    <div class="wraper">
+        <!-- Расположение поцентру плавающих float элементов      -->
+        <div class="class1_1">&nbsp;</div>
+        <div class="class1_1"></div>
+        <div class="class1_1"></div>
+        <div class="class1_1"></div>
+        <div class="class1_1"></div>
+    </div>
+    <div class="wraper2">
+    <!-- Расположение по центру flex элементов      -->
+        <div class="class1_2">&nbsp;</div>
+        <div class="class1_2"></div>
+        <div class="class1_2"></div>
+        <div class="class1_2"></div>
+        <div class="class1_2"></div>
+    </div>
+    <div class="wraper3">
+    <!-- Расположение поцентру элементов используя абсолютное позиционирование      -->
+        <div class="class1_3">&nbsp;</div>
+        <div class="class1_4"></div>
+        <div class="class1_5"></div>
+        <div class="class1_6"></div>
+        <div class="class1_7"></div>
+    </div>
+    
+</body>
+</html>

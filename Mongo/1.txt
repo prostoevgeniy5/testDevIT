@@ -1,0 +1,22 @@
+// Все команды вы выполняете в mongo shell
+// Задание
+
+// Напишите команды для получения следующих значений:
+
+//     Выведите 5 записей из коллекции posts пропустив первые 5
+// База данных MongoDB содержит коллекции:
+
+// posts - Записи - 
+// {
+//   "properties": {
+//     "_id": { "bsonType": "objectId" },
+//     "title": { "bsonType": "string" },
+//     "content": { "bsonType": "string" },
+//     "author": { "bsonType": "string" },
+//     "like": { "bsonType": "int" },
+//     "dislike": { "bsonType": "int" }
+//   }
+// }
+    # В коллекции posts пропустить skip первые 5 документов и выбрать limit не более 5 следующих документов
+
+    db.posts.skip(5).limit(5);

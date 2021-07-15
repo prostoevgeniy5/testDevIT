@@ -1,0 +1,13 @@
+//     Создайте новый файл 503.html в папке html с следующим содержимым:
+# 7. Создаем новый файл в папке html
+    # Переходим в папку html
+        cd ./www/html/
+    # Создаем файл 503.html
+        touch 503.html
+    # Заполняем файл построчно
+        printf "<html>\n" > 503.html
+        printf "    <head>\n" >> 503.html
+        printf "        <title>503</title>\n" >> 503.html
+        printf "    </head>\n" >> 503.html
+        printf "</html>" >> 503.html
+    

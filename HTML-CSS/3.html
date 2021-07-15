@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--        //     Напишите стили для кнопки, которая может иметь несколько состояний: active, disabled, danger. Цвета произвольные.
+-->
+    <title>Buttons</title>
+    <style>
+        .container    {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        button {
+            margin: 10px;
+            padding: 5px;
+            border: 2px solid gray;
+            background-color: rgb(81, 206, 91);
+            height: 50px;
+            border-radius: 10%;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.5s ease;
+        }
+        button:hover {
+            box-shadow: 4px 4px 6px rgba(0, 0, 255, .2), 4px -4px 6px rgba(0, 0, 255, .2), -4px 4px 6px rgba(0, 0, 255, .2);
+            background-color: yellowgreen;
+            color: #000;
+        }
+    /*# Активное состояние    */
+        .activeState:active {
+            background-color: #ccc;
+            font-weight: 700;
+            color: #888;
+        }
+    /*# Элемент отключен ( аттрибут disabled ) */
+        .disabledState:disabled {
+            border: 1px solid transparent;
+            box-shadow: none;
+            background-color: #ccc;
+            color:gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button>Button</button>
+        <button active class="activeState">Active Button</button>
+        <button disabled class="disabledState">Disabled Button</button>
+    </div>
+
+</body>
+</html>

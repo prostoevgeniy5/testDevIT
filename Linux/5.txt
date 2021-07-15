@@ -1,0 +1,6 @@
+//     Сделайте символическую ссылку на файл access.log в папке html.
+# 5. Сделаем символическую ссылку на файл access.log
+    # Переходим в каталог logs
+        cd ../../logs/
+    # Создаем символическую ссылку на файл access.log с именем accesslink
+        ln -s access.log accesslink
